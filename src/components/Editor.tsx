@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import Sidebar from './Sidebar';
 import { DraftResponseSchema } from '@/lib/schemas';
 import { z } from 'zod';
-import { Download, Copy, RefreshCw, Wand2, CheckSquare } from 'lucide-react';
+import { Download, Copy, Wand2 } from 'lucide-react';
 
 type Draft = z.infer<typeof DraftResponseSchema>;
 
@@ -16,7 +16,6 @@ interface EditorProps {
 export default function Editor({ draft, onRewrite, isRewriting }: EditorProps) {
   const [markdown, setMarkdown] = useState(draft.articleMarkdown);
   const [view, setView] = useState<'split' | 'edit' | 'preview'>('split');
-  const [selectedInstruction, setSelectedInstruction] = useState('');
 
   // Update local state if draft updates (e.g. after rewrite)
   React.useEffect(() => {

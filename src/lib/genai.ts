@@ -1,10 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const apiKey = process.env.GEMINI_API_KEY;
-
-if (!apiKey) {
-  throw new Error("GEMINI_API_KEY is not defined in environment variables");
-}
+const apiKey = process.env.GEMINI_API_KEY || "";
 
 // In Next.js dev mode, the global object is preserved across reloads.
 // This prevents creating too many instances of the client.

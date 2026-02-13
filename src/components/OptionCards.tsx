@@ -1,7 +1,7 @@
 import React from 'react';
 import { z } from 'zod';
 import { OptionSchema } from '@/lib/schemas';
-import { ArrowRight, CheckCircle, Search, FileText } from 'lucide-react';
+import { ArrowRight, Search, FileText } from 'lucide-react';
 
 type Option = z.infer<typeof OptionSchema>;
 

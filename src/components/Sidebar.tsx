@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { z } from 'zod';
 import { ClaimSchema, ResearchItemSchema } from '@/lib/schemas';
-import { AlertTriangle, Check, BookOpen, Search } from 'lucide-react';
+import { AlertTriangle, Search } from 'lucide-react';
 import clsx from 'clsx';
 
 type Claim = z.infer<typeof ClaimSchema>;
