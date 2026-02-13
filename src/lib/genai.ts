@@ -12,8 +12,6 @@ const globalForGenAI = global as unknown as { genai: GoogleGenerativeAI };
 
 export const genai =
   globalForGenAI.genai ||
-  new GoogleGenerativeAI({
-    apiKey,
-  });
+  new GoogleGenerativeAI(apiKey);
 
 if (process.env.NODE_ENV !== "production") globalForGenAI.genai = genai;
