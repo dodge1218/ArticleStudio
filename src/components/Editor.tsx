@@ -64,7 +64,7 @@ export default function Editor({ draft, onRewrite, isRewriting }: EditorProps) {
               {['edit', 'split', 'preview'].map((v) => (
                 <button
                   key={v}
-                  onClick={() => setView(v as any)}
+                  onClick={() => setView(v as 'edit' | 'split' | 'preview')}
                   className={`px-3 py-1 text-xs font-medium rounded capitalize ${view === v ? 'bg-white shadow text-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
                 >
                   {v}

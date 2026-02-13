@@ -33,7 +33,7 @@ export default function OptionCards({ options, onSelect, isDrafting }: OptionCar
             </h3>
             
             <p className="text-sm text-gray-600 mb-4 italic">
-              "{opt.thesis}"
+              &quot;{opt.thesis}&quot;
             </p>
             
             <div className="flex-1 space-y-4 mb-6">

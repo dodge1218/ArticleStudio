@@ -19,9 +19,11 @@ export default function Home() {
   const [draftResult, setDraftResult] = useState<DraftResult | null>(null);
   
   // Store input to pass to draft
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [inputData, setInputData] = useState<any>(null);
   const [isRewriting, setIsRewriting] = useState(false);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleAnalyze = async (data: any) => {
     setInputData(data);
     setStep('analyzing');
